@@ -1,8 +1,0 @@
-
-convert -size 600x30 xc:#6a0dad -fill black -stroke black -strokewidth 100 -draw "stroke-linecap square path 'M 120,0 L 120,1'" belt.png
-convert -size 600x30 xc: -seed -33223323 +noise Random -modulate 20,0 noise.png
-convert -size 600x30 xc:white -fill none -stroke black -draw "stroke-opacity 0.2         path 'M 0,4  L 600,4'" -draw "stroke-opacity 0.2 path 'M 0,9  L 600,9'" -draw "stroke-opacity 0.2 path 'M 0,14 L 600,14'" -draw "stroke-opacity 0.2 path 'M 0,19 L 600,19'" -draw "stroke-opacity 0.2 path 'M 0,24 L 600,24'" -draw "stroke-opacity 0.2 path 'M 0,29 L 600,29'"  lines.png
-
-convert belt.png \( noise.png -normalize +level 1,4% \) \( lines.png -normalize +level 1,100% \) -compose screen -composite output.png
-
-#convert output.png -crop 600x29+0+0 cropped.png
