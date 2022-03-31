@@ -94,7 +94,7 @@ const generateCompositetempBeltFile = async (beltFile: string, noiseFile: string
 
 const generateLines = async ( outputFile: string): Promise<any> =>
 new Promise((resolve, reject) => {
-  const cmd = `convert -size 600x30 xc:white -fill none -stroke black -draw "stroke-opacity 0.2         path 'M 0,4  L 600,4'" -draw "stroke-opacity 0.2 path 'M 0,9  L 600,9'" -draw "stroke-opacity 0.2 path 'M 0,14 L 600,14'" -draw "stroke-opacity 0.2 path 'M 0,19 L 600,19'" -draw "stroke-opacity 0.2 path 'M 0,24 L 600,24'" -draw "stroke-opacity 0.2 path 'M 0,29 L 600,29'"  ${outputFile}`;
+  const cmd = `convert -size 600x30 xc:white -fill none -stroke black -draw "stroke-opacity 0.2 path 'M 0,4  L 600,4'" -draw "stroke-opacity 0.2 path 'M 0,9  L 600,9'" -draw "stroke-opacity 0.2 path 'M 0,14 L 600,14'" -draw "stroke-opacity 0.2 path 'M 0,19 L 600,19'" -draw "stroke-opacity 0.2 path 'M 0,24 L 600,24'" -draw "stroke-opacity 0.2 path 'M 0,29 L 600,29'"  ${outputFile}`;
   console.log(cmd);
   exec(cmd,
   (error, stdout, stderr) => {
